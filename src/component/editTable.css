@@ -1,0 +1,12 @@
+.span_check_btn {
+  padding: 13px;
+}
+
+.span_cross_btn {
+  color: var(--secondary-color);
+}
+
+.span_check_btn,
+.span_cross_btn {
+  cursor: pointer;
+}

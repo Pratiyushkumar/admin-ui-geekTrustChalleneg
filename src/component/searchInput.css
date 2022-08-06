@@ -1,0 +1,25 @@
+.search__container {
+  border: 2px solid var(--grey-color);
+  overflow: auto;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin: 10px;
+}
+
+.search__container .search__box {
+  width: 67%;
+  height: 1.5em;
+  margin: 1em;
+  padding: 12px 14px;
+  font-family: var(--secondary-Font);
+  font-weight: 600;
+  border: 0px;
+}
+@media only screen and (min-width: 150px) and (max-width: 780px) {
+  /* {} */
+  .search__container {
+    width: 95%;
+    margin: 0 auto;
+  }
+}

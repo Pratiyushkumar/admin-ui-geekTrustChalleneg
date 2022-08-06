@@ -1,0 +1,16 @@
+.span__edit__btn {
+  padding: 13px;
+}
+
+.edit__btn,
+.delete__btn {
+  cursor: pointer;
+}
+
+.delete__btn {
+  color: var(--secondary-color);
+}
+
+.admin__checkbox {
+  cursor: pointer;
+}

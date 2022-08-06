@@ -1,0 +1,124 @@
+.admin__table__container {
+  /* padding: 0 2%;
+  margin: 10px auto 0; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.admin__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin__main__checkbox {
+  cursor: pointer;
+}
+
+th,
+td {
+  /* border: 1px solid #ffffff; */
+  text-align: left;
+  padding: 8px;
+  /* font-size: 32px; */
+}
+thead {
+  margin-left: 10px;
+}
+
+/* .admin__table__heading {
+  text-align: center;
+  margin-bottom: 15px;
+} */
+/* .admin__table__body {
+  text-align: center;
+} */
+
+table thead tr th {
+  padding: 4px;
+  border-bottom: 1px solid var(--grey-color);
+  font-weight: 800;
+}
+
+table tbody tr td {
+  padding: 10px;
+  border-bottom: 1px solid var(--grey-color);
+  font-weight: 500;
+}
+
+.span__edit__btn {
+  padding: 13px;
+}
+
+.edit__btn,
+.delete__btn {
+  cursor: pointer;
+}
+
+.delete__btn {
+  color: var(--secondary-color);
+}
+
+.adminui__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 9.31em;
+  margin-right: 19.625em;
+  flex-wrap: wrap;
+}
+.button-deleted {
+  height: 3em;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--pink-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+.button-deleted:active {
+  transform: translateY(4px);
+}
+.left__last__page,
+.left__page,
+.right__page,
+.right__last__page {
+  margin: 30px;
+  height: 2em;
+  width: 2em;
+  padding: 3px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  color: var(--white-color);
+}
+/* .left__last__page__button {
+} */
+.left__last__page:active,
+.left__page:active,
+.right__page:active,
+.right__last__page:active {
+  transform: translateY(4px);
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+.left__last__page:focus,
+.left__page:focus,
+.right__page:focus,
+.right__last__page:focus {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+.right__page {
+  margin: 30px;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 780px) {
+  .adminui__footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
