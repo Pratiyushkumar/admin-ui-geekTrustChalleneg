@@ -17,7 +17,8 @@
 }
 
 th,
-td {
+td,
+tr {
   /* border: 1px solid #ffffff; */
   text-align: left;
   padding: 8px;
