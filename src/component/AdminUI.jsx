@@ -28,7 +28,7 @@ const AdminUI = () => {
   const fetchData = async () => {
     try {
       const urlResponse = await axios.get(apiGetEndpoint);
-      console.log(urlResponse.data);
+      // console.log(urlResponse.data);
       urlResponse.data.forEach((ele) => (ele.isChecked = false));
       setUserData(urlResponse.data);
     } catch (error) {
