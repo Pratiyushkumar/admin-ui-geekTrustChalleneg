@@ -28,7 +28,7 @@ const AdminUI = () => {
   const fetchData = async () => {
     try {
       const urlResponse = await axios.get(apiGetEndpoint);
-      // console.log(urlResponse.data);
+      console.log(urlResponse.data);
       urlResponse.data.forEach((ele) => (ele.isChecked = false));
       setUserData(urlResponse.data);
     } catch (error) {
@@ -80,11 +80,12 @@ const AdminUI = () => {
   const handleSearch = (value) => {
     let elements = [...userData];
     const searchText = elements.filter((ele) => {
-      if (ele.name === value) {
-        return ele;
-      } else if (ele.email === value) {
-        return ele;
-      } else if (ele.role === value) {
+      const tempSearchKeyword = value.toLowerCase();
+      if (
+        ele.name.toLowerCase().search(tempSearchKeyword) > -1 ||
+        ele.email.toLowerCase().search(tempSearchKeyword) > -1 ||
+        ele.role.toLowerCase().search(tempSearchKeyword) > -1
+      ) {
         return ele;
       }
     });
@@ -210,7 +211,8 @@ const AdminUI = () => {
               Delete Selected
             </button>
           </div>
-          <div className="backwardButtons">
+          {/* <div className="backwardButtons"> */}
+          <div className="page-btn">
             <button
               className="left__last__page"
               onClick={() => setCurrentPage(1)}
@@ -227,13 +229,13 @@ const AdminUI = () => {
             >
               <i className="fa-solid fa-angle-left"></i>
             </button>
-          </div>
-          <Pagination
-            dataPerPage={dataPerPage}
-            totalData={userData.length}
-            paginate={paginate}
-          />
-          <div className="forwardButtons">
+            {/* </div> */}
+            <Pagination
+              dataPerPage={dataPerPage}
+              totalData={userData.length}
+              paginate={paginate}
+            />
+            {/* <div className="forwardButtons"> */}
             <button
               className="right__page"
               onClick={() => {
@@ -253,6 +255,8 @@ const AdminUI = () => {
               <i className="fa-solid fa-angles-right"></i>
             </button>
           </div>
+
+          {/* </div> */}
         </div>
       </div>
     </>

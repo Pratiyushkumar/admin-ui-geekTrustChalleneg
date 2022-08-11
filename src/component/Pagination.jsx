@@ -11,21 +11,21 @@ const Pagination = ({ dataPerPage, totalData, paginate }) => {
 
   return (
     <>
-      <div className="pagination__container">
-        <ul className="pagination">
-          {pageNumber.map((itemNumber) => (
-            <li
-              key={itemNumber}
-              className="page-item"
-              onClick={() => paginate(itemNumber)}
-            >
-              <a href="!#" className="page-link">
-                {itemNumber}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* <div className="pagination__container"> */}
+      <ul className="pagination">
+        {pageNumber.map((itemNumber) => (
+          <li
+            key={itemNumber}
+            className="page-item"
+            onClick={() => paginate(itemNumber)}
+          >
+            <a href="!#" className="page-link">
+              {itemNumber}
+            </a>
+          </li>
+        ))}
+      </ul>
+      {/* </div> */}
     </>
   );
 };

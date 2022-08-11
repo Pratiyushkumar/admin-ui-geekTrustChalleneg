@@ -9,7 +9,7 @@ const TableRow = ({
 }) => {
   return (
     <>
-      <tr key={items.id}>
+      <tr key={items.id} className={items.isChecked ? "rowBackground" : null}>
         <td>
           <input
             type="checkbox"

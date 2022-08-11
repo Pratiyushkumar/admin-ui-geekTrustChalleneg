@@ -14,3 +14,6 @@
 .admin__checkbox {
   cursor: pointer;
 }
+.rowBackground {
+  background-color: var(--grey-color);
+}
