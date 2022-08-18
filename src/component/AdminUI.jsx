@@ -11,6 +11,7 @@ import EditTable from "./EditTable";
 const AdminUI = () => {
   const [debounceTimeOut, setDebounceTimeOut] = useState(0);
   const [userData, setUserData] = useState([]);
+  const [tempUserData, setTempUserData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [dataPerPage] = useState(10);
   const [editDeatilsId, setEditDetailsId] = useState(null);
@@ -31,6 +32,7 @@ const AdminUI = () => {
       console.log(urlResponse.data);
       urlResponse.data.forEach((ele) => (ele.isChecked = false));
       setUserData(urlResponse.data);
+      setTempUserData(urlResponse.data);
     } catch (error) {
       return null;
     }
@@ -89,9 +91,12 @@ const AdminUI = () => {
         return ele;
       }
     });
-    if (value === " ") {
-      setUserData(elements);
+
+    if (value.length === 0) {
+      console.log(value.length);
+      setUserData(tempUserData);
     } else {
+      console.log(value.length);
       setUserData(searchText);
     }
   };
