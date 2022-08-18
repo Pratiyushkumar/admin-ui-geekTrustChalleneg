@@ -89,7 +89,7 @@ const AdminUI = () => {
         return ele;
       }
     });
-    if (value === "") {
+    if (value === " ") {
       setUserData(elements);
     } else {
       setUserData(searchText);
